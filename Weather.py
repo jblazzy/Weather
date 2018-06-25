@@ -15,6 +15,12 @@ def main():
     URL = "api.openweathermap.org/data/2.5/weather?zip={}".format(ZIP)
     print(URL)
 
+    reply = requests.get(URL)
+    print(reply)
+
+    # Use weather warnings from api aswell
+    # There are currently no weather warnings
+    # and the 5 day forecast is:
 
 
 if __name__ == "__main__":
