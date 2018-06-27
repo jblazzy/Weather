@@ -22,12 +22,15 @@ def main():
     json2 = requests.get(URL1).json()
     temp = json1['main']['temp']
     temp = (9/5) * (temp - 273) + 32
-    #° F = 9/5 (K - 273) + 32
+
+    print("City: " + json1['name'])
     print("Temperature: " + str(temp) + " °F")
     print("Current Weather: " + weather[0]['main'])
     print("Description: " + weather[0]['description'])
     #print("Forecast: ")
-    # need to implement unix timestamp converter for 'dt' values
+
+    # next step! : 
+    # implement unix timestamp converter for 'dt' values in forecast data
 
     # Use weather warnings from api aswell
     # There are currently no weather warnings
