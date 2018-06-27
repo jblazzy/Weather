@@ -18,8 +18,8 @@ def main():
     weather = json1['weather']
 
     # URL for the forecast
-    URL2 = "api.openweathermap.org/data/2.5/forecast?zip={}".format(ZIP)
-    json2 = requests.get(URL1).json()
+    URL2 = "http://api.openweathermap.org/data/2.5/forecast?appid=eb8707e702d345d487b0f91037928f2d&zip={}".format(ZIP)
+    json2 = requests.get(URL2).json()
     temp = json1['main']['temp']
     temp = (9/5) * (temp - 273) + 32
 
@@ -27,6 +27,9 @@ def main():
     print("Temperature: " + str(temp) + " °F")
     print("Current Weather: " + weather[0]['main'])
     print("Description: " + weather[0]['description'])
+
+    print("json 2 \n")
+    print(json2['list'])
     #print("Forecast: ")
 
     # next step! : 
